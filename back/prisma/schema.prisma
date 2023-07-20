@@ -1,0 +1,157 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mysql"
+    url      = env("DATABASE_URL")
+}
+
+enum Semester {
+    autumn
+    spring
+}
+
+model Student {
+    id        Int      @id @default(autoincrement())
+    firstName String
+    lastName  String
+    dateBirth DateTime
+
+    phone        String
+    parent1Phone String
+    parent2Phone String
+
+    email        String
+    parent1Email String
+    parent2Email String
+
+    studentSemester studentSemester[]
+
+    allowPhoto Boolean @default(false)
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    ensembles Ensemble[]
+
+    lessons  Lesson[]
+    Queue    Queue[]
+    Accepted Accepted[]
+}
+
+model Queue {
+    id Int @id @default(autoincrement())
+
+    appliedInstrument Instrument @relation(fields: [instrumentId], references: [id])
+
+    student      Student   @relation(fields: [studentId], references: [id])
+    createdAt    DateTime  @default(now())
+    accepted     Accepted? @relation(fields: [acceptedId], references: [id])
+    stopped      Boolean   @default(false)
+    stoppedAt    DateTime?
+    instrumentId Int
+    studentId    Int
+    acceptedId   Int?
+}
+
+model Accepted {
+    id        Int      @id @default(autoincrement())
+    student   Student  @relation(fields: [studentId], references: [id])
+    createdAt DateTime @default(now())
+    Queue     Queue[]
+    studentId Int
+}
+
+model Instrument {
+    id        Int      @id @default(autoincrement())
+    name      String    @unique
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+    Queue     Queue[]
+    Lesson    Lesson[]
+}
+
+model School {
+    id              Int               @id @default(autoincrement())
+    name            String  @unique
+    address         String?
+    Lesson          Lesson[]
+    studentSemester studentSemester[]
+}
+
+model Ensemble {
+    id          Int          @id @default(autoincrement())
+    name        String?
+    createdAt   DateTime     @default(now())
+    disbandedAt DateTime?
+    students    Student[]
+    Lessons     Lesson[]
+    LessonType  LessonType[]
+}
+
+model ModelOfDay {
+    id               Int          @id @default(autoincrement())
+    name             String
+    lessonType       LessonType[]
+    appliedToLessons Lesson[]    @relation("appliedToLessons")
+    ignoredLessons   Lesson[]    @relation("ignoredLessons")
+}
+
+model LessonType {
+    id           Int         @id @default(autoincrement())
+    ensemble     Ensemble    @relation(fields: [ensembleId], references: [id])
+    startTime    DateTime
+    endTime      DateTime
+    ModelOfDay   ModelOfDay? @relation(fields: [modelOfDayId], references: [id])
+    modelOfDayId Int?
+    ensembleId   Int
+}
+
+model Lesson {
+    id          Int        @id @default(autoincrement())
+    instruments Instrument @relation(fields: [instrumentId], references: [id])
+    ensemble    Ensemble   @relation(fields: [ensembleId], references: [id])
+
+    startTime DateTime
+    endTime   DateTime
+
+    atSchool        School    @relation(fields: [schoolId], references: [id])
+    presentStudents Student[]
+
+    songs      Song[]
+    modelOfDayIgnored ModelOfDay @relation(fields: [modelOfDayIgnoredId], references: [id], name: "ignoredLessons")
+    modelOfDayApplied ModelOfDay @relation(fields: [modelOfDayAppliedId], references: [id], name: "appliedToLessons")
+
+
+    whatWeDid String?
+    nextTime  String?
+
+    toPrepareForNextLesson String?
+    needToPrepare          Boolean @default(true)
+
+    instrumentId Int
+    ensembleId   Int
+    schoolId     Int
+    modelOfDayIgnoredId Int
+    modelOfDayAppliedId Int
+}
+
+model studentSemester {
+    id          Int      @id @default(autoincrement())
+    schoolYear1 Int
+    schoolYear2 Int
+    semester    Semester
+    students    Student  @relation(fields: [studentId], references: [id])
+    grade       Int
+    school      School   @relation(fields: [schoolId], references: [id])
+    studentId   Int
+    schoolId    Int
+}
+
+model Song {
+    id          Int     @id @default(autoincrement())
+    name        String
+    description String?
+    Lesson      Lesson[] @relation()
+}
