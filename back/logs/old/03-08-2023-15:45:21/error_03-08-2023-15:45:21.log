@@ -1,0 +1,5 @@
+2023-08-03T13:45:03.720Z error: 	TRPCError: 
+Invalid `prisma.student.update()` invocation:
+
+
+Unknown nested field 'orderBy' for operation updateOneStudent does not match any query.

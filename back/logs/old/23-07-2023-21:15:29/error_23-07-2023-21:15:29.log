@@ -1,0 +1,709 @@
+2023-07-23T18:29:39.405Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:37:54.393Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:38:26.006Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:38:54.975Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:39:09.949Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:39:32.850Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:40:07.467Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:40:28.580Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:40:47.886Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:41:04.721Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:41:32.029Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:41:41.401Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:42:36.476Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:43:21.428Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:43:43.414Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:43:59.193Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:44:21.144Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:45:20.530Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:45:35.976Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:45:48.220Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:46:58.327Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:47:13.728Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:47:40.571Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:47:54.380Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:51:45.805Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:53:07.871Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:53:17.940Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:55:04.432Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:56:45.776Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:57:14.570Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]

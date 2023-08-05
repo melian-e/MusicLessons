@@ -1,0 +1,22 @@
+2023-08-03T13:36:38.469Z error: 	TRPCError: 
+Invalid `prisma.student.update()` invocation:
+
+{
+  where: {
+    id: 0
+  },
+  data: {
+    studentSemester: {
+      create: {
+        schoolYear1: 7,
+        schoolYear2: 2023,
+        semester: 2024,
+                  ~~~~
+        grade: "autumn",
+        schoolId: 1
+      }
+    }
+  }
+}
+
+Argument `semester`: Invalid value provided. Expected Semester, provided Int.

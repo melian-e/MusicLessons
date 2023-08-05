@@ -35,32 +35,40 @@ model Student {
 
     ensembles Ensemble[]
 
+    studentInstruments StudentInstrument[]
     lessons  Lesson[]
+    attendedLessons Lesson[] @relation("presentStudents")
     Queue    Queue[]
-    Accepted Accepted[]
+}
+
+model StudentInstrument{
+    id Int @id @default(autoincrement())
+
+    lessons Lesson[]
+    student Student @relation(fields: [studentId], references: [id])
+    instrument Instrument @relation(fields: [instrumentId], references: [id])
+    startDate DateTime @default(now())
+
+    studentId Int
+    instrumentId Int
 }
 
 model Queue {
     id Int @id @default(autoincrement())
 
-    appliedInstrument Instrument @relation(fields: [instrumentId], references: [id])
+    appliedInstrument Instrument @relation(fields: [appliedInstrumentId], references: [id])
 
     student      Student   @relation(fields: [studentId], references: [id])
     createdAt    DateTime  @default(now())
-    accepted     Accepted? @relation(fields: [acceptedId], references: [id])
+
+    accepted     Boolean   @default(false)
+    acceptedAt   DateTime?
+
     stopped      Boolean   @default(false)
     stoppedAt    DateTime?
-    instrumentId Int
+    
+    appliedInstrumentId Int
     studentId    Int
-    acceptedId   Int?
-}
-
-model Accepted {
-    id        Int      @id @default(autoincrement())
-    student   Student  @relation(fields: [studentId], references: [id])
-    createdAt DateTime @default(now())
-    Queue     Queue[]
-    studentId Int
 }
 
 model Instrument {
@@ -69,14 +77,14 @@ model Instrument {
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
     Queue     Queue[]
-    Lesson    Lesson[]
+    StudentInstrument StudentInstrument[]
 }
 
 model School {
     id              Int               @id @default(autoincrement())
     name            String  @unique
     address         String?
-    Lesson          Lesson[]
+    lesson          Lesson[]
     studentSemester studentSemester[]
 }
 
@@ -86,8 +94,8 @@ model Ensemble {
     createdAt   DateTime     @default(now())
     disbandedAt DateTime?
     students    Student[]
-    Lessons     Lesson[]
-    LessonType  LessonType[]
+    lessons     Lesson[]
+    lessonType  LessonType[]
 }
 
 model ModelOfDay {
@@ -110,14 +118,17 @@ model LessonType {
 
 model Lesson {
     id          Int        @id @default(autoincrement())
-    instruments Instrument @relation(fields: [instrumentId], references: [id])
+    studentInstruments StudentInstrument[]
+
     ensemble    Ensemble   @relation(fields: [ensembleId], references: [id])
 
     startTime DateTime
     endTime   DateTime
 
     atSchool        School    @relation(fields: [schoolId], references: [id])
-    presentStudents Student[]
+    
+    students        Student[]
+    presentStudents Student[] @relation("presentStudents")
 
     songs      Song[]
     modelOfDayIgnored ModelOfDay @relation(fields: [modelOfDayIgnoredId], references: [id], name: "ignoredLessons")
@@ -130,7 +141,6 @@ model Lesson {
     toPrepareForNextLesson String?
     needToPrepare          Boolean @default(true)
 
-    instrumentId Int
     ensembleId   Int
     schoolId     Int
     modelOfDayIgnoredId Int

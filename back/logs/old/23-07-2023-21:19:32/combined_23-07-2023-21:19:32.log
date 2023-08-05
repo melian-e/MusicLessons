@@ -1,0 +1,40 @@
+2023-07-23T19:18:13.975Z info: 	=========== SERVER STARTED FOR HTTP RQ ===========
+2023-07-23T19:18:13.977Z info: 	    =============   PORT: 8080   =============
+2023-07-23T19:18:26.875Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T19:18:35.478Z error: 	uncaughtException: 
+Invalid `prisma.student.create()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. No 'School' record(s) (needed to inline the relation on 'studentSemester' record(s)) was found for a nested connect on one-to-many relation 'SchoolTostudentSemester'.
+PrismaClientKnownRequestError: 
+Invalid `prisma.student.create()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. No 'School' record(s) (needed to inline the relation on 'studentSemester' record(s)) was found for a nested connect on one-to-many relation 'SchoolTostudentSemester'.
+    at Rn.handleRequestError (/home/iemelian/Documents/MusicLessons/back/build/server.js:43533:189)
+    at Rn.handleAndLogRequestError (/home/iemelian/Documents/MusicLessons/back/build/server.js:43520:16)
+    at Rn.request (/home/iemelian/Documents/MusicLessons/back/build/server.js:43511:16)
+    at async Object.addStudent (/home/iemelian/Documents/MusicLessons/back/build/server.js:49264:5)

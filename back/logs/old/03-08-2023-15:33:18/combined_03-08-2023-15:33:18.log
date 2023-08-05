@@ -1,0 +1,101 @@
+2023-08-03T13:17:11.335Z info: 	=========== SERVER STARTED FOR HTTP RQ ===========
+2023-08-03T13:17:11.337Z info: 	    =============   PORT: 8080   =============
+2023-08-03T13:22:06.313Z error: 	TRPCError: [
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "undefined",
+    "path": [
+      "studentId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "grade"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "undefined",
+    "path": [
+      "schoolId"
+    ],
+    "message": "Required"
+  }
+]
+2023-08-03T13:26:19.233Z error: 	TRPCError: [
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "undefined",
+    "path": [
+      "studentId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "grade"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "undefined",
+    "path": [
+      "schoolId"
+    ],
+    "message": "Required"
+  }
+]
+2023-08-03T13:29:21.942Z error: 	TRPCError: [
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "undefined",
+    "path": [
+      "studentId"
+    ],
+    "message": "Required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "grade"
+    ],
+    "message": "Expected number, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "undefined",
+    "path": [
+      "schoolId"
+    ],
+    "message": "Required"
+  }
+]
+2023-08-03T13:32:10.483Z error: 	TRPCError: [
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "undefined",
+    "path": [
+      "studentId"
+    ],
+    "message": "Required"
+  }
+]
+2023-08-03T13:32:45.670Z error: 	TRPCError: manage_default.addStudentSemester is not a function

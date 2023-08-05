@@ -1,5 +1,5 @@
 import express, { Express, Request, Response, NextFunction } from 'express';
-import bodyParser from 'body-parser';
+import bodyParser, { json } from 'body-parser';
 import cors from 'cors';
 import * as dotenv from 'dotenv';
 
@@ -12,6 +12,7 @@ import errorHandler from './modules/common/errorHandler/errorHandler';
 import * as trpcExpress from '@trpc/server/adapters/express';
 import { createContext } from './modules/common/router/trpc';
 import { initRouter } from 'modules/common/router/router';
+import { ZodError } from 'zod';
 
 dotenv.config();
 
@@ -34,14 +35,22 @@ app.use(
         createContext,
         onError({ error, type, path }) {
             console.error(`[trpc] path=${path} ; type=${type}`, error);
-            //logger.logger.error(error.toString());
+            logger.logger.error(error.toString());
             // if (error.code === 'INTERNAL_SERVER_ERROR') {
             //
             // }
-            error.message = 'Internal server error';
+            if (error.cause instanceof ZodError) {
+                // Returning only first zod error message to client
+                error.message = JSON.stringify({error : error.cause });
+            }
+            else {
+                error.message = 'Internal server error';
+            }
         }
     }),
 );
+
+export type AppRouter = typeof appRouter;
 
 const server: http.Server<any> = http.createServer(app);
 

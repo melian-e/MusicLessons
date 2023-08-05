@@ -1,0 +1,3 @@
+2023-08-03T13:33:19.568Z info: 	=========== SERVER STARTED FOR HTTP RQ ===========
+2023-08-03T13:33:19.569Z info: 	    =============   PORT: 8080   =============
+2023-08-03T13:33:24.463Z error: 	TRPCError: manage_default.addStudentSemester is not a function

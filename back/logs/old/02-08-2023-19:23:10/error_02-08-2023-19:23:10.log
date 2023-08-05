@@ -1,0 +1,110 @@
+2023-08-01T15:05:47.311Z error: 	TRPCError: [
+  {
+    "code": "invalid_type",
+    "expected": "date",
+    "received": "string",
+    "path": [
+      "dateBirth"
+    ],
+    "message": "Expected date, received string"
+  }
+]
+2023-08-01T15:07:00.944Z error: 	TRPCError: [
+  {
+    "code": "invalid_type",
+    "expected": "date",
+    "received": "string",
+    "path": [
+      "dateBirth"
+    ],
+    "message": "Expected date, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "studentSemester",
+      "grade"
+    ],
+    "message": "Expected number, received string"
+  }
+]
+2023-08-01T15:07:38.837Z error: 	TRPCError: [
+  {
+    "code": "invalid_type",
+    "expected": "date",
+    "received": "string",
+    "path": [
+      "dateBirth"
+    ],
+    "message": "Expected date, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "string",
+    "path": [
+      "studentSemester",
+      "grade"
+    ],
+    "message": "Expected number, received string"
+  }
+]
+2023-08-01T16:16:39.468Z error: 	TRPCError: [
+  {
+    "code": "invalid_type",
+    "expected": "date",
+    "received": "string",
+    "path": [
+      "dateBirth"
+    ],
+    "message": "Expected date, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "date",
+    "received": "string",
+    "path": [
+      "queue",
+      "createdAt"
+    ],
+    "message": "Expected date, received string"
+  }
+]
+2023-08-01T16:17:51.455Z error: 	TRPCError: [
+  {
+    "code": "invalid_type",
+    "expected": "date",
+    "received": "string",
+    "path": [
+      "dateBirth"
+    ],
+    "message": "Expected date, received string"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "date",
+    "received": "string",
+    "path": [
+      "queue",
+      "createdAt"
+    ],
+    "message": "Expected date, received string"
+  }
+]
+2023-08-02T17:07:23.870Z error: 	TRPCError: 
+Invalid `prisma.student.create()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. No 'Instrument' record(s) (needed to inline the relation on 'Queue' record(s)) was found for a nested connect on one-to-many relation 'InstrumentToQueue'.
+2023-08-02T17:10:04.126Z error: 	TRPCError: 
+Invalid `prisma.student.create()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. No 'Instrument' record(s) (needed to inline the relation on 'Queue' record(s)) was found for a nested connect on one-to-many relation 'InstrumentToQueue'.
+2023-08-02T17:22:45.924Z error: 	TRPCError: 
+Invalid `prisma.student.create()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. No 'Instrument' record(s) (needed to inline the relation on 'Queue' record(s)) was found for a nested connect on one-to-many relation 'InstrumentToQueue'.

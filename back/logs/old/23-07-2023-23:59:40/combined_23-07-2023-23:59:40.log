@@ -1,0 +1,20 @@
+2023-07-23T21:58:23.682Z info: 	=========== SERVER STARTED FOR HTTP RQ ===========
+2023-07-23T21:58:23.683Z info: 	    =============   PORT: 8080   =============
+2023-07-23T21:58:42.352Z error: 	TRPCError: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "string",
+    "path": [],
+    "message": "Expected object, received string"
+  }
+]
+2023-07-23T21:58:43.978Z error: 	TRPCError: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "string",
+    "path": [],
+    "message": "Expected object, received string"
+  }
+]

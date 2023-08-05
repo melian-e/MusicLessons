@@ -1,0 +1,18 @@
+2023-07-23T21:58:42.351Z error: 	TRPCError: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "string",
+    "path": [],
+    "message": "Expected object, received string"
+  }
+]
+2023-07-23T21:58:43.978Z error: 	TRPCError: [
+  {
+    "code": "invalid_type",
+    "expected": "object",
+    "received": "string",
+    "path": [],
+    "message": "Expected object, received string"
+  }
+]

@@ -1,0 +1,37 @@
+2023-07-23T18:03:28.968Z info: 	=========== SERVER STARTED FOR HTTP RQ ===========
+2023-07-23T18:03:28.969Z info: 	    =============   PORT: 8080   =============
+2023-07-23T18:03:33.882Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]
+2023-07-23T18:03:33.883Z error: 	TRPCError: Unexpected token 'T', "TRPCError:"... is not valid JSON
+2023-07-23T18:03:33.886Z error: 	uncaughtException: Unexpected token 'T', "TRPCError:"... is not valid JSON
+SyntaxError: Unexpected token 'T', "TRPCError:"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at Object.onError (/home/iemelian/Documents/MusicLessons/back/build/server.js:49365:24)
+    at onError (/home/iemelian/Documents/MusicLessons/back/build/server.js:45071:24)
+    at caughtErrorToData (/home/iemelian/Documents/MusicLessons/back/build/server.js:44760:12)
+    at resolveHTTPResponse (/home/iemelian/Documents/MusicLessons/back/build/server.js:44911:75)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /home/iemelian/Documents/MusicLessons/back/build/server.js:45061:5
+    at async /home/iemelian/Documents/MusicLessons/back/build/server.js:45092:5

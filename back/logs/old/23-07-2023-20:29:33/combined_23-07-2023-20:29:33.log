@@ -1,0 +1,26 @@
+2023-07-23T18:28:40.383Z info: 	=========== SERVER STARTED FOR HTTP RQ ===========
+2023-07-23T18:28:40.384Z info: 	    =============   PORT: 8080   =============
+2023-07-23T18:28:46.644Z error: 	TRPCError: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "firstName"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "lastName"
+    ]
+  }
+]

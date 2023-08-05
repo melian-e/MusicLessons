@@ -1,0 +1,5 @@
+2023-08-02T17:23:16.365Z error: 	TRPCError: 
+Invalid `prisma.student.create()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. No 'Instrument' record(s) (needed to inline the relation on 'StudentInstrument' record(s)) was found for a nested connect on one-to-many relation 'InstrumentToStudentInstrument'.
