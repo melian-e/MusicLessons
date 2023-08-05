@@ -1,5 +1,5 @@
 <script lang="ts">
-import { Label, Input, Checkbox, Button, Modal } from "flowbite-svelte";
+import { Label, Input, Checkbox, Button, Modal, Select } from "flowbite-svelte";
 import type { InputType } from "flowbite-svelte/dist/types";
 import type { dataMap } from "$lib/interfaces";
 import { createEventDispatcher } from "svelte";
@@ -136,25 +136,36 @@ async function submitSchool() {
             <Label for={key} class="block mb-2">{key}</Label>
             <Checkbox id={key} class="relative" bind:checked={value} on:change={update}/>
         </div>
+    {:else if key === "semester"}
+        <Label for="semester">Semester</Label>
+        <Select
+            id={key}
+            bind:value={value}
+            class="relative" 
+            placeholder="Semester"
+        >
+            <option value="spring">Spring</option>
+            <option value="autumn">Autumn</option>
+        </Select>
     {:else if key === "appliedInstrumentId"}
         <div class="mb-6">
             <Label for={key} class="block mb-2">{key}</Label>
-            <select id={key} class="relative" bind:value on:change={update}>
+            <Select id={key} class="relative" bind:value on:change={update}>
                 {#each instruments as instrument}
                     <option value={instrument.id}>{instrument.name}</option>
                 {/each}
-            </select>
-            <Button class="ml-2" color="dark" on:click={()=>modalInstrument=!modalInstrument}>Add new instrument</Button>
+            </Select>
+            <Button class="mt-2" color="dark" on:click={()=>modalInstrument=!modalInstrument}>Add new instrument</Button>
         </div>
     {:else if key === "schoolId"}
         <div class="mb-6">
             <Label for={key} class="block mb-2">{key}</Label>
-            <select id={key} class="relative" bind:value on:change={update}>
+            <Select id={key} class="relative" bind:value on:change={update}>
                 {#each schools as school}
                     <option value={school.id}>{school.name}</option>
                 {/each}
-            </select>
-            <Button class="ml-2" color="dark" on:click={()=>modalSchool=!modalSchool}>Add new school</Button>
+            </Select>
+            <Button class="mt-2" color="dark" on:click={()=>modalSchool=!modalSchool}>Add new school</Button>
         </div>
     {:else if key === "createdAt" || key === "updatedAt" || key === "deletedAt" || key === "dateBirth"}
         <div class="mb-6">

@@ -1,0 +1,22 @@
+2023-08-05T13:34:44.918Z error: 	TRPCError: [
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "nan",
+    "path": [
+      "schoolId"
+    ],
+    "message": "Expected number, received nan"
+  }
+]
+2023-08-05T13:51:48.946Z error: 	TRPCError: [
+  {
+    "code": "invalid_type",
+    "expected": "number",
+    "received": "nan",
+    "path": [
+      "grade"
+    ],
+    "message": "Expected number, received nan"
+  }
+]

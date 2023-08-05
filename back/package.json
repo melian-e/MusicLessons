@@ -15,7 +15,7 @@
     "copyFilesFolder:linux": "mkdir ./build/files/ -p && cp -a ./files/. ./build/files/",
     "build": "npm run copyFilesFolder && esbuild server.ts --platform=node --bundle --outdir=build/ --external:/files/*",
     "start": "npm run build && node build/server.js",
-    "dev": "nodemon --watch ./ -e js,ts,json --exec \"ts-node-esm server.ts\""
+    "dev": "nodemon --watch ./ -e js,ts,json --exec \"ts-node server.ts\""
   },
   "author": "",
   "license": "ISC",
@@ -34,6 +34,7 @@
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "node-fetch": "^3.3.0",
+    "nodemon": "^3.0.1",
     "run-script-os": "^1.1.6",
     "superjson": "^1.13.1",
     "ts-node": "^10.9.1",

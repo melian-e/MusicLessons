@@ -1,6 +1,6 @@
-import { initExampleRouter } from 'modules/example/exampleRouting';
+import { initExampleRouter } from '../../example/exampleRouting';
 import { router } from './trpc';
-import { initStudentsRouter } from 'modules/students/studentsRouting';
+import { initStudentsRouter } from '../../students/studentsRouting';
 
 
 export function initRouter() {

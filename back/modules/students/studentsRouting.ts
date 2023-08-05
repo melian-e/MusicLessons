@@ -99,5 +99,24 @@ export function initStudentsRouter() {
             .mutation(async ({ input }) => {
                 return await manage.addStudentSemester(input.studentId, input.schoolYear1, input.schoolYear2, input.semester, input.grade, input.schoolId);
             }),
+        editSemester: publicProcedure
+            .input(z.object({
+                id: z.number(),
+                schoolYear1: z.number(),
+                schoolYear2: z.number(),
+                semester: z.union([z.literal("spring"), z.literal("autumn")]),
+                grade: z.number(),
+                schoolId: z.number()
+            }))
+            .mutation(async ({ input }) => {
+                return await manage.editSemester(input.id, input.schoolYear1, input.schoolYear2, input.semester, input.grade, input.schoolId);
+            }),
+        deleteSemester: publicProcedure
+            .input(z.object({
+                id: z.number()
+            }))
+            .mutation(async ({ input }) => {
+                return await manage.deleteSemester(input.id);
+            }),
     });
 }

@@ -17,6 +17,5 @@ export function getTRPCClient() {
             }),
         ],
     });
-    
     return client;
 }

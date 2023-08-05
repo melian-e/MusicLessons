@@ -20,7 +20,7 @@ let lastSemester = student.studentSemester.slice(-1)[0];
 let schoolId: string = lastSemester.school.Id;
 let schoolYear1: number = new Date().getFullYear();
 let schoolYear2: number = new Date().getFullYear() + 1;
-let semester: string = new Date().getMonth() < 6 ? "spring" : "autumn";
+let semester: "spring" | "autumn" = new Date().getMonth() < 6 ? "spring" : "autumn";
 let grade: number =
     lastSemester.semester == "spring"
         ? lastSemester.grade + 1
@@ -45,6 +45,60 @@ async function addSemester() {
         }
     } catch (e: any) {}
 }
+
+async function deleteSemester(id: number) {
+    let res = await getTRPCClient().students.deleteSemester.mutate({id : id});
+
+    if (res) {
+        for(let semester of student.studentSemester) {
+            if(semester.id == id) {
+                student.studentSemester.splice(student.studentSemester.indexOf(semester), 1);
+            }
+        }
+    }
+}
+
+async function editSemester(id : number) {
+    console.log("student", student);
+
+    let semester2 = student.studentSemester.find((semester: { id: number; }) => semester.id == id);
+
+    console.log("id", id, "semester", semester2);
+
+    schoolId = semester2.schoolId;
+    schoolYear1 = semester2.schoolYear1;
+    schoolYear2 = semester2.schoolYear2;
+    semester = semester2.semester;
+    grade = semester2.grade;
+
+    console.log("id", id, "schoolid", schoolId);
+
+    try {
+        let res = await getTRPCClient().students.editSemester.mutate({
+            id: id,
+            schoolId: Number(schoolId),
+            schoolYear1: Number(schoolYear1),
+            schoolYear2: Number(schoolYear2),
+            semester: semester,
+            grade: Number(grade),
+        });
+
+        if (res) {
+            for(let semester of student.studentSemester) {
+                if(semester.id == id) {
+                    semester.schoolId = Number(schoolId);
+                    semester.schoolYear1 = Number(schoolYear1);
+                    semester.schoolYear2 = Number(schoolYear2);
+                    semester.semester = semester;
+                    semester.grade = Number(grade);
+                }
+            }
+        }
+    } catch (e: any) {
+        console.log(e);
+    }
+    
+}
 </script>
 
 <div class="h-full w-full overflow-auto p-2">
@@ -55,49 +109,69 @@ async function addSemester() {
                 <span slot="header"
                     >{semester.schoolYear1}-{semester.schoolYear2} : {semester.semester}</span
                 >
-                <div class="grid grid-cols-2">
+                <div class="grid grid-cols-2 gap-2">
                     <div>
                         <Label for="schoolName">School Name</Label>
-                        <Input
+                        <Select
                             id="schoolName"
-                            bind:value={semester.school.name}
+                            bind:value={semester.schoolId}
                             placeholder="School Name"
-                            readonly={!editMode}
-                        />
+                            disabled={!editMode}
+                        >
+                            {#each schools as school}
+                                <option value={school.id}>{school.name}</option>
+                            {/each}
+                        </Select>
                         <Label for="schoolYear1">School Year 1</Label>
                         <Input
                             id="schoolYear1"
                             bind:value={semester.schoolYear1}
                             placeholder="School Year 1"
-                            readonly={!editMode}
+                            disabled={!editMode}
                         />
                         <Label for="schoolYear2">School Year 2</Label>
                         <Input
                             id="schoolYear2"
                             bind:value={semester.schoolYear2}
                             placeholder="School Year 2"
-                            readonly={!editMode}
+                            disabled={!editMode}
                         />
                         <Label for="semester">Semester</Label>
-                        <Input
+                        <Select
                             id="semester"
                             bind:value={semester.semester}
                             placeholder="Semester"
-                            readonly={!editMode}
-                        />
+                            disabled={!editMode}
+                        >
+                            <option value="spring">Spring</option>
+                            <option value="autumn">Autumn</option>
+                        </Select>
                         <Label for="grade">Grade</Label>
                         <Input
                             id="grade"
                             bind:value={semester.grade}
                             placeholder="Grade"
-                            readonly={!editMode}
+                            disabled={!editMode}
                         />
                     </div>
-                    <Button
+                    <div >
+                        <Button
                         class="w-min h-min"
-                        color="green"
+                        color={editMode ? "yellow" : "green"}
                         on:click={() => (editMode = !editMode)}>edit</Button
                     >
+                    <Button
+                        class="w-min h-min"
+                        color={editMode ? "green" : "dark"}
+                        disabled={!editMode}
+                        on:click={()=>editSemester(semester.id)}>save</Button
+                    >
+                    <Button
+                        class="w-min h-min"
+                        color="red"
+                        on:click={()=>deleteSemester(semester.id)}>delete</Button
+                    >
+                    </div>
                 </div>
             </AccordionItem>
         {/each}

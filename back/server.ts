@@ -10,8 +10,10 @@ import logger from './modules/common/logger/logger';
 import errorHandler from './modules/common/errorHandler/errorHandler';
 
 import * as trpcExpress from '@trpc/server/adapters/express';
+import type { inferAsyncReturnType } from '@trpc/server';
 import { createContext } from './modules/common/router/trpc';
-import { initRouter } from 'modules/common/router/router';
+
+import { initRouter } from './modules/common/router/router';
 import { ZodError } from 'zod';
 
 dotenv.config();

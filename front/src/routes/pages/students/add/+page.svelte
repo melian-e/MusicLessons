@@ -5,6 +5,7 @@ import Input from "../../../../lib/Input.svelte";
 import type { dataMap } from "$lib/interfaces";
 import { getTRPCClient } from "$lib/clientTRPC";
 import { goto } from "$app/navigation";
+import Layout from "../../../+layout.svelte";
 export let data: import("./$types").PageData;
 
 let instruments = data.instruments;
@@ -46,9 +47,11 @@ let dataInputs: dataMap = {
 
 let defaultModal = false;
 
-async function submit(e: MouseEvent) {
+async function submit() {
     try {
+        
         const result = await getTRPCClient().students.addStudent.mutate(
+            // @ts-ignore
             dataInputs
         );
         console.log(result);
@@ -76,8 +79,6 @@ async function submit(e: MouseEvent) {
 function handleData(event: { detail: { key: string; data: dataMap } }) {
     dataInputs = event.detail.data;
 }
-
-console.log(schools);
 </script>
 
 <div class="h-full w-full overflow-auto">
